@@ -107,8 +107,10 @@ app.use(
 
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   if (err instanceof multer.MulterError) {
+    console.log(err);
     res.status(400).json({ message: err.message });
   } else if (err) {
+    console.log(err);
     res.status(500).json({ message: err.message });
   } else {
     next();
