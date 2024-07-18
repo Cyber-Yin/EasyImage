@@ -7,7 +7,7 @@ import fs from "fs";
 
 config();
 
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 10002;
 const TOKEN = process.env.TOKEN || "image_token";
 
 const uploadDir = path.join(__dirname, "images");
