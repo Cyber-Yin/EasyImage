@@ -42,8 +42,9 @@ const checkReferer = (req: Request, res: Response, next: NextFunction) => {
     } else {
       res.status(403).send("Access Denied");
     }
+  } else {
+    next();
   }
-  next();
 };
 
 const fileFilter = (
@@ -116,8 +117,6 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   } else if (err) {
     console.log(err);
     res.status(500).json({ message: err.message });
-  } else {
-    next();
   }
 });
 
