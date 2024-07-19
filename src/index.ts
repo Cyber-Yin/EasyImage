@@ -27,7 +27,11 @@ const authenticateToken = (req: Request, res: Response, next: NextFunction) => {
   next();
 };
 
-const allowedDomains = ["https://www.example.com", "https://sub.example.com"];
+const allowedDomains = [
+  "https://www.cookresume.com",
+  "https://cookresume.com",
+  "http://localhost:3000",
+];
 
 const checkReferer = (req: Request, res: Response, next: NextFunction) => {
   const referer = req.headers.referer;
