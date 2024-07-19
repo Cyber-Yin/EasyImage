@@ -17,6 +17,6 @@ COPY --from=builder /app/package.json ./package.json
 COPY --from=prod-deps /app/node_modules ./node_modules
 ENV NODE_ENV production
 
-EXPOSE 10000
+EXPOSE 10002
 
 CMD ["yarn", "start"]
